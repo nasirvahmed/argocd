@@ -5,6 +5,6 @@ metadata:
 spec:
   forProvider:
     acl: private
-    locationConstraint: us-east-1
+    region: us-east-1
   providerConfigRef:
     name: provider-aws
