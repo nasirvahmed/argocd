@@ -18,4 +18,4 @@ spec:
         ]
       }
   providerConfigRef:
-    name: provider-aws
+    name: provider-aws-iam
