@@ -1,10 +1,14 @@
 apiVersion: s3.aws.upbound.io/v1beta1
 kind: Bucket
 metadata:
-  name: nahmed-sbox-cxp-test
+  labels:
+    testing.upbound.io/example-name: s3
+  name: ${Rand.RFC1123Subdomain}
 spec:
-  forProvider:
-    acl: private
-    region: us-east-1
   providerConfigRef:
     name: provider-aws
+  forProvider:
+    objectLockEnabled: true
+    region: us-west-1
+    tags:
+      Name: SampleBucket
