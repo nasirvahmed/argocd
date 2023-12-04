@@ -7,4 +7,4 @@ spec:
     acl: private
     locationConstraint: us-east-1
   providerConfigRef:
-    name: provider-aws-iam
+    name: provider-aws

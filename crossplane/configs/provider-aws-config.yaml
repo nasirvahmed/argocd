@@ -1,7 +1,7 @@
 apiVersion: aws.upbound.io/v1beta1
 kind: ProviderConfig
 metadata:
-  name: provider-aws-iam
+  name: provider-aws
 spec:
   credentials:
     source: IRSA
