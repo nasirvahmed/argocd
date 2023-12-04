@@ -1,0 +1,10 @@
+apiVersion: s3.aws.crossplane.io/v1beta1
+kind: Bucket
+metadata:
+  name: nahmed-sbox-cxp-test
+spec:
+  forProvider:
+    acl: private
+    locationConstraint: us-east-1
+  providerConfigRef:
+    name: provider-aws-iam
