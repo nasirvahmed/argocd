@@ -1,0 +1,21 @@
+apiVersion: identity.aws.crossplane.io/v1beta1
+kind: IAMRole
+metadata:
+  name: nahmed-cxp-test-role
+spec:
+  forProvider:
+    assumeRolePolicyDocument: |
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+          }
+        ]
+      }
+  providerConfigRef:
+    name: provider-aws
