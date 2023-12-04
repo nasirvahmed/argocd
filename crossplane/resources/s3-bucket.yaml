@@ -3,7 +3,7 @@ kind: Bucket
 metadata:
   labels:
     testing.upbound.io/example-name: s3
-  name: ${Rand.RFC1123Subdomain}
+  name: nahmed-sbox-cxp-test
 spec:
   providerConfigRef:
     name: provider-aws
@@ -11,4 +11,4 @@ spec:
     objectLockEnabled: true
     region: us-west-1
     tags:
-      Name: SampleBucket
+      Name: nahmed-sbox-cxp-test
