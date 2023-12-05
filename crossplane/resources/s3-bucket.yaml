@@ -9,6 +9,6 @@ spec:
     name: provider-aws
   forProvider:
     objectLockEnabled: true
-    region: us-west-1
+    region: us-east-1
     tags:
       Name: nahmed-sbox-cxp-test
