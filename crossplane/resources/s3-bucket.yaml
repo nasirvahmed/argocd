@@ -5,9 +5,9 @@ metadata:
   namespace: crossplane-system
 spec:
   forProvider:
-    locationConstraint: us-west-2
+    locationConstraint: us-west-1
     acl: private
     versioningConfiguration:
-      status: Suspended
+      status: Enabled
   providerConfigRef:
     name: provider-aws
