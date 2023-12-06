@@ -1,7 +1,7 @@
 apiVersion: s3.aws.crossplane.io/v1beta1
 kind: Bucket
 metadata:
-  name: nahmed-sbox-cxp-test
+  name: nahmed-sbox-cxp-s3-test
   namespace: crossplane-system
 spec:
   forProvider:
