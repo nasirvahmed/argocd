@@ -1,13 +1,13 @@
 apiVersion: s3.aws.crossplane.io/v1beta1
 kind: Bucket
 metadata:
-  labels:
-    testing.crossplane.io/example-name: s3
   name: nahmed-sbox-cxp-test
+  namespace: crossplane-system
 spec:
+  forProvider:
+    locationConstraint: us-west-2
+    acl: private
+    versioningConfiguration:
+      status: Disabled
   providerConfigRef:
     name: provider-aws
-  forProvider:
-    locationConstraint: us-west-1
-    tags:
-      Name: nahmed-sbox-cxp-test
