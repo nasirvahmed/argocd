@@ -1,8 +1,8 @@
-apiVersion: s3.aws.upbound.io/v1beta1
+apiVersion: s3.aws.crossplane.io/v1beta1
 kind: Bucket
 metadata:
   labels:
-    testing.upbound.io/example-name: s3
+    testing.crossplane.io/example-name: s3
   name: nahmed-sbox-cxp-test
 spec:
   providerConfigRef:
