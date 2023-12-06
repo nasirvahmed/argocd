@@ -6,7 +6,7 @@ metadata:
   name: nahmed-sbox-cxp-test
 spec:
   providerConfigRef:
-    name: provider-aws
+    name: aws-provider
   forProvider:
     locationConstraint: us-west-1
     tags:
