@@ -8,6 +8,6 @@ spec:
     locationConstraint: us-west-2
     acl: private
     versioningConfiguration:
-      status: Disabled
+      status: Suspended
   providerConfigRef:
     name: provider-aws
