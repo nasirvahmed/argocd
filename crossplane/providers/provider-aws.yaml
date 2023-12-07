@@ -11,8 +11,26 @@ spec:
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-aws
+  name: provider-aws-iam
 spec:
-  package: xpkg.upbound.io/upbound/provider-aws:v0.45.0
+  package: xpkg.upbound.io/upbound/provider-aws-iam:v0.45.0
+  controllerConfigRef:
+    name: aws-config
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-aws-s3
+spec:
+  package: xpkg.upbound.io/upbound/provider-aws-s3:v0.45.0
+  controllerConfigRef:
+    name: aws-config
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-aws-ec2
+spec:
+  package: xpkg.upbound.io/upbound/provider-aws-ec2:v0.45.0
   controllerConfigRef:
     name: aws-config
