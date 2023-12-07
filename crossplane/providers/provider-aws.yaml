@@ -40,6 +40,6 @@ kind: Provider
 metadata:
   name: provider-aws-s3
 spec:
-  package: xpkg.upbound.io/crossplane-contrib/provider-aws-s3:v0.37.0
+  package: xpkg.upbound.io/upbound/provider-aws-s3:v0.37.0
   controllerConfigRef:
     name: aws-config
