@@ -37,8 +37,8 @@ spec:
   providerConfigRef:
     name: provider-aws
 ---
-apiVersion: identity.aws.upbound.io/v1beta1
-kind: IAMRole
+apiVersion: iam.aws.upbound.io/v1beta1
+kind: Role
 metadata:
   name: role-with-admin-access
 spec:
@@ -61,7 +61,7 @@ spec:
     path: /
     tags:
       - key: "crossplane-kind"
-        value: "iamrole.identity.aws.upbound.io"
+        value: "iam.aws.upbound.io"
     managedPolicyArns:
       - "arn:aws:iam::aws:policy/AdministratorAccess"
   providerConfigRef:
