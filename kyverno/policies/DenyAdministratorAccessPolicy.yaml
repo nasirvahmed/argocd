@@ -10,7 +10,7 @@ spec:
       match:
         resources:
           kinds:
-            - iam.aws.upbound.io/v1alpha1/Role
+            - iam.aws.upbound.io/v1beta1/Role
       validate:
         message: "Attaching 'AdministratorAccess' policy to IAM roles is not allowed."
         pattern:
