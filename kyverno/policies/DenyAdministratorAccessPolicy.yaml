@@ -1,0 +1,22 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-administratoraccess-policy
+spec:
+  validationFailureAction: enforce
+  background: false
+  rules:
+    - name: deny-iamrole-with-administratoraccess
+      match:
+        resources:
+          kinds:
+            - iam.aws.crossplane.io/v1alpha1/Role
+      validate:
+        message: "Attaching 'AdministratorAccess' policy to IAM roles is not allowed."
+        pattern:
+          spec:
+            forProvider:
+              assumeRolePolicyDocument: "?*"
+              inlinePolicies: "?*"
+              managedPolicies:
+                - "!arn:aws:iam::aws:policy/AdministratorAccess"
